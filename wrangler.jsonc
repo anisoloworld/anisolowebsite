@@ -1,0 +1,30 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "my-movie-website",
+  "compatibility_date": "2026-10-19",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "ANILIST_CACHE",
+      "id": "1dae3161ad4c487e8ead8f0bb05eb08e"
+    }
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "my-movie-website"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  }
+}

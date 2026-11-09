@@ -1,0 +1,209 @@
+
+.media-grid{
+  display: grid !important; 
+  grid-template-columns: repeat(6, 1fr) !important; 
+  gap: 8px !important
+}
+
+.media-grid img,a,.media-gridrec img{
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    cursor: pointer;
+
+}
+
+.media-grid img:hover,.media-gridrec img:hover {
+  transform: scale(1.04) !important;
+  z-index: 10; /* Keeps the hovered card cleanly layered on top of neighbors */
+  transition: filter 0.25s ease;
+  
+}
+
+.disc:hover{
+    transform: scale(1.1) !important;
+  z-index: 10; /* Keeps the hovered card cleanly layered on top of neighbors */
+  transition: filter 0.25s ease;
+
+
+}
+.container-eed0471c392a85b58118295de04d919d__stand{
+  display: flex;
+}
+
+.catlinks:hover{
+  background-color: rgb(76, 75, 75);
+}
+.catlinks:active{
+   background-color: rgb(57, 56, 56);
+}
+@media (min-width:515px){
+    .nav-link{position: relative !important; 
+  display: inline-block !important;}
+
+
+}
+@media (min-width:987px){
+  .hamburger{
+    display: none !important;
+    width: 0px;
+  }
+}
+
+.dashboard-header a:hover{
+  transition: all 0.1s ease-in-out;
+  transform: translateY(-2px);
+}
+
+
+
+.media-card:active,a:active {
+  transform: scale(1) !important;
+  z-index: 10; /* Keeps the hovered card cleanly layered on top of neighbors */
+  transition: filter 0.25s ease;
+
+}
+.catrow{
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+   -ms-overflow-style: none;
+   
+}
+.catrow .catrows:hover{
+  background-color:#A020F046
+  
+  
+}
+.catrow .selected:hover{
+  background-color: #A020F0;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+header button{
+    
+    color: white !important;
+    border-radius: 15px;
+    height:35px;
+    
+    
+}
+.dashboard-logo{
+  margin-right: 5px;
+}
+
+.watchbt:hover{
+        transform: scale(1.03);
+}
+
+
+
+@media (max-width: 630px) {
+  .detail-poster-wrapper {
+    display:none !important;
+    
+  }
+  .movielogo{
+  width:60vw !important;
+}
+  
+  .idinfo{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 987px) {
+  header .nav-link, header .nav-link::before,.installbt{
+    display: none !important;
+    opacity: 0 !important;
+    
+  }
+  .nextbt{display: none !important;}
+}
+@media (max-width: 467px) {
+  .lefnavlinks{
+    display: none !important;
+    opacity: 0 !important;
+    
+  }}
+@media (max-width: 870px){
+  .mainvideo{
+    width:100% !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .media-grid,.media-gridrec {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important; /* Slightly tighter gap looks cleaner on small screens */
+    
+  }
+}
+@media (max-width: 655px){
+  .filterbtns{flex-direction: column;}
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidesearch {
+  from{
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.searchbar{
+  animation: slidesearch 0.1s ease-out;
+}
+
+@keyframes cardani {
+  0%{
+    opacity:0;
+    transform:translateY(60px)
+  }
+
+  30%{
+    opacity:0;
+    transform:translateY(60px)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px)
+  }
+}
+
+.media-grid a, .media-gridrec a{
+  animation: cardani linear;
+  animation-timeline:view();
+  animation-range: entry -60px cover 30%;
+
+}
+
+@keyframes arrowrotate{
+  from{transform: rotate(-90deg);}
+}
+@keyframes arrowrotate1{
+  from{transform: rotate(90deg);}
+}
+@keyframes catdown{
+  from{transform: translateY(-20px);
+       opacity:0;
+  }
+}
